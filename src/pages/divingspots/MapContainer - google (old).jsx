@@ -156,5 +156,3 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(<MapContainer />, rootElement);
 
 export default MapContainer
-
-// AIzaSyBg1GZ21k7vvc2tlXn1o_LGh-KIDoDATeo
