@@ -1,0 +1,92 @@
+
+body {
+  font-family: "Playfair Display", sans-serif;
+}
+
+// Remove ugly outline around Bootstrap 4 navbar button
+.navbar-toggler:focus, .navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+// Make standark Bootstrap 4 carousel indicators round instead of square
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+// Add black color overlay to carousel images for better contrast
+.carousel-item:after {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(107, 98, 88, 0.2);
+}
+
+.Footer-Element {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.footer-list {
+  list-style: none;
+  line-height: 2.2rem;
+}
+
+.footer-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links {
+  list-style: disc;
+  text-decoration: underline;
+}
+
+.thumbnail {
+  max-width: 300px;
+  height: auto;
+}
+
+.mapframe {
+  min-height: 1000px;
+}
+
+
+.divingCard {
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.35);
+  box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.35);
+  transition: all .2s ease-in-out
+}
+
+.divingCard:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: #0170b9;
+  :hover {color:#0170b9;}
+}
+
+.card-text {
+  text-decoration: none;
+  color: black;
+  :hover {color: black;}
+}
+
+.mapimg {
+  max-height: 100px;
+  width: auto;
+}
+
+.leaflet-container {
+  min-height: 800px;
+  min-width: 600px;
+}
+

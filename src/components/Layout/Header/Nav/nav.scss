@@ -1,0 +1,62 @@
+@import '../../../../GlobalStyles/variables';
+//used variables : $linkcolor, $linkactivecolor
+
+.navbar {
+    font-family: $font-h;
+}
+
+.navbar_link{
+    color: $linkcolor;
+    text-decoration: none;
+}
+
+.navbar_link:hover{
+    text-decoration: none;
+    color: $hovercolor;
+}
+
+.navbar_link--active{
+    color: $linkactivecolor;
+}
+
+.navbar li{
+    margin-right: 25px;
+    font-size: 28px;
+}
+
+ul{
+    padding-inline-start: 0;
+}
+
+.logo {
+    width: auto;
+    height: 70px;
+}
+
+.logosmall {
+    width: auto;
+    height: 70px;
+    display: none;
+}
+
+.english {
+    display: none;
+}
+
+.flagicon {
+    height: auto;
+    width: 35px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1296px) {
+  
+    .logosmall {
+      display: block;
+    }
+  
+    .logo {
+      display: none;
+    }
+}

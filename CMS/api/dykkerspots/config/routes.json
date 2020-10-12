@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dykkerspots",
+      "handler": "dykkerspots.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dykkerspots/count",
+      "handler": "dykkerspots.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dykkerspots/:id",
+      "handler": "dykkerspots.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dykkerspots",
+      "handler": "dykkerspots.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dykkerspots/:id",
+      "handler": "dykkerspots.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dykkerspots/:id",
+      "handler": "dykkerspots.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dykkerspots",
+  "info": {
+    "name": "dykkerspots"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Stednavn": {
+      "type": "string",
+      "required": true
+    },
+    "billede_top": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "billede_galleri": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Strand",
+        "Baad",
+        "Vrag"
+      ]
+    },
+    "Latitude": {
+      "type": "string",
+      "regex": "([0-8]){1}([0-9]){1}[.]{1}([0-5]){1}([0-9]){1}[.]{1}([0-9]){1}([0-9]){1}([(0-9])*",
+      "required": true
+    },
+    "Longtitude": {
+      "type": "string",
+      "regex": "([0-8]){1}([0-9]){1}[.]{1}([0-5]){1}([0-9]){1}[.]{1}([0-9]){1}([0-9]){1}([(0-9])*",
+      "required": true
+    },
+    "dybde_bund": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "dybde_top": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "afstand_land": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "beskrivelse_dansk": {
+      "type": "richtext",
+      "default": "Beskrivelse af stedet er på vej :)"
+    },
+    "beskrivelse_engelsk": {
+      "type": "richtext",
+      "default": "A description of this place is underway :)"
+    }
+  }
+}
