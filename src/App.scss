@@ -1,3 +1,4 @@
+@import './GlobalStyles/variables';
 
 body {
   font-family: "Playfair Display", sans-serif;
@@ -43,9 +44,9 @@ body {
   text-decoration: none;
 }
 
-.footer-links {
-  list-style: disc;
-  text-decoration: underline;
+.footer-list a:hover {
+  color: $hovercolor;
+  text-decoration: none;
 }
 
 .thumbnail {
@@ -62,12 +63,15 @@ body {
   -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.35);
   -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.35);
   box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.35);
-  transition: all .2s ease-in-out
+  transition: all .2s ease-in-out;
 }
 
 .divingCard:hover {
-  transform: scale(1.05);
+  -webkit-box-shadow: 6px 8px 10px 0px rgba(0,0,0,0.50);
+  -moz-box-shadow: 6px 8px 10px 0px rgba(0,0,0,0.50);
+  box-shadow: 6px 8px 10px 0px rgba(0,0,0,0.50);
 }
+
 
 .card-title {
   color: #0170b9;
@@ -83,6 +87,11 @@ body {
 .mapimg {
   max-height: 100px;
   width: auto;
+}
+
+a .img {
+  display: block;
+  border: 0px
 }
 
 .leaflet-container {

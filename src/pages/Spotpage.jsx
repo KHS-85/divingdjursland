@@ -35,15 +35,16 @@ const Spotpage = ({ match }) => {
         const GalleryDisplay = spot.billede_galleri.map((galleryimg, i) => {
 
             return (
-                <img src={"http://localhost:1337" + galleryimg.url} className="img-thumbnail imgThumb" rel={i++} alt="" />
+                <img src={galleryimg.url} className="img-thumbnail imgThumb" rel={i++} alt="" />
             )
         })
+
 
         // Thumbnails that are used inside the lightbox modal
         const GalleryThumbs = spot.billede_galleri.map((galleryimg, i) => {
 
             return (
-                <img src={"http://localhost:1337" + galleryimg.url} className="demo cursor lightboxThumb img-fluid" rel={i++} alt={galleryimg.alternativeText} />
+                <img src={galleryimg.url} className="demo cursor lightboxThumb img-fluid" rel={i++} alt={galleryimg.alternativeText} />
             )
         })
 
@@ -53,7 +54,7 @@ const Spotpage = ({ match }) => {
             return (
                 <div className="mySlides">
                     <div className="numbertext">{i++ +1 + "/" + spot.billede_galleri.length}</div>
-                    <img src={"http://localhost:1337" + galleryimg.url} className="img-fluid lightboxImg" rel={i++} alt={galleryimg.alternativeText} />
+                    <img src={galleryimg.url} className="img-fluid lightboxImg" rel={i++} alt={galleryimg.alternativeText} />
                 </div>
             )
         })
@@ -73,7 +74,7 @@ const Spotpage = ({ match }) => {
 
                         <div className="row px-3">
                             <div className="col-sm-12 col-lg-6">
-                                <img src={"http://localhost:1337" + spot.billede_top.url} alt="Diving Spot" className="img-fluid divingimg" />
+                                <img src={spot.billede_top.url} alt="Diving Spot" className="img-fluid divingimg" />
                             </div>
 
                             <div className="col-sm-12 col-lg-6 divingstats">

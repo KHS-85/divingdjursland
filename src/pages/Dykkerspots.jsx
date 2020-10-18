@@ -12,16 +12,14 @@ const Dykkerspots = () => {
 
     console.log(spots)
 
-
     const spotcardmap = spots.map(spot => {
 
         return (
 
-
             <section className="col-12 col-md-6 col-lg-4 my-4">
                 <Link to={"/dykkerspots/" + (spot.Stednavn.toLowerCase().replace(' ', '-').replace('/', '').replace(' ', '-'))} className="card-link">
                     <div key={Math.random} className="card divingCard">
-                        <img src={"http://localhost:1337" + spot.billede_top.url} alt="diving spot" title={spot.Stednavn} className="img-fluid card-img-top p-1" />
+                        <img src={spot.billede_top.url} alt="diving spot" title={spot.Stednavn} className="img-fluid card-img-top p-1" />
                         <div className="card-body">
                             <h4 className="card-title">{spot.Stednavn}</h4>
                         </div>
@@ -52,7 +50,7 @@ const Dykkerspots = () => {
     }
 
     useEffect(() => {
-        setTimeout(showList, 1000);
+        setTimeout(showList, 500);
     })
 
     return (

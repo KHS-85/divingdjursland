@@ -29,7 +29,7 @@ const MapContainer = () => {
           <p className="popupTextHeadline"> {spot.Stednavn}  </p>
           <div className="row">
             <div className="col-6">
-              <img src={"http://localhost:1337" + spot.billede_top.url} alt="dykkerspot thumbnail" className="popupImg" /> <br />
+              <img src={spot.billede_top.url} alt="dykkerspot thumbnail" className="popupImg" /> <br />
             </div>
             <div className="col-6 pr-0 pl-4">
               <p className="popupText popupTextFirst">Type: {spot.type} </p>
