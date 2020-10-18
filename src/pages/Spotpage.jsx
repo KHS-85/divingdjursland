@@ -73,7 +73,7 @@ const Spotpage = ({ match }) => {
                         </div>
 
                         <div className="row px-3">
-                            <div className="col-sm-12 col-lg-6">
+                            <div className="col-sm-12 col-lg-6 mb-lg-0 mb-4">
                                 <img src={spot.billede_top.url} alt="Diving Spot" className="img-fluid divingimg" />
                             </div>
 

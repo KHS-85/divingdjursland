@@ -4,13 +4,6 @@
     border-top: 1px solid black;
 }
 
-.divingimg {
-    max-width: 100%;
-    height: auto;
-    border: solid black 2px;
-    margin-bottom: 30px;
-}
-
 .divingheadline {
     // color: $linkcolor;
     font-family: $font-h;
@@ -57,7 +50,20 @@ a:hover {
     .divingheadline {
         font-size: 50px;
     }
+
   
+}
+
+@media screen and (max-width: 700px) {
+  
+  // #spotList {
+  //   display: block !important;
+  // }
+
+  .testbtn {
+    color: red !important;
+  }
+
 }
 
 #spotMap {

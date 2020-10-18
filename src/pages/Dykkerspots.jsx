@@ -16,7 +16,7 @@ const Dykkerspots = () => {
 
         return (
 
-            <section className="col-12 col-md-6 col-lg-4 my-4">
+            <section  className="col-11 col-md-6 col-lg-4 my-4 ml-3 ml-md-0">
                 <Link to={"/dykkerspots/" + (spot.Stednavn.toLowerCase().replace(' ', '-').replace('/', '').replace(' ', '-'))} className="card-link">
                     <div key={Math.random} className="card divingCard">
                         <img src={spot.billede_top.url} alt="diving spot" title={spot.Stednavn} className="img-fluid card-img-top p-1" />
@@ -38,15 +38,17 @@ const Dykkerspots = () => {
     function showList() {
         var x = document.getElementById("spotList")
         var y = document.getElementById("spotMap")
-        x.style.display = "flex";
-        y.style.display = "none";
+        x.style.height = "auto";
+        y.style.height = "0";
+        y.style.overflow = "hidden";
     }
 
     function showMap() {
         var b = document.getElementById("spotList")
         var a = document.getElementById("spotMap")
-        a.style.display = "block";
-        b.style.display = "none";
+        a.style.height = "auto";
+        b.style.height = "0";
+        b.style.overflow = "hidden";
     }
 
     useEffect(() => {
@@ -80,7 +82,7 @@ const Dykkerspots = () => {
                 <div className="row">
 
                     <div className="col-6 text-right">
-                        <button type="button" class="btn btn-outline-primary" onClick={showList}>Liste</button>
+                        <button type="button" class="testbtn btn btn-outline-primary" onClick={showList}>Liste</button>
                     </div>
 
                     <div className="col-6">
