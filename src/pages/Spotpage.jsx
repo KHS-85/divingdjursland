@@ -35,7 +35,10 @@ const Spotpage = ({ match }) => {
         const GalleryDisplay = spot.billede_galleri.map((galleryimg, i) => {
 
             return (
+                <div className="mb-5 col-6 col-sm-4 col-md-3 col-lg-2">
                 <img src={galleryimg.url} className="img-thumbnail imgThumb" rel={i++} alt="" />
+                </div>
+                
             )
         })
 
@@ -103,8 +106,9 @@ const Spotpage = ({ match }) => {
                         </div>
 
                         <div className="mb-5">
-
+                            <div className="row">
                             {GalleryDisplay}
+                            </div>
 
                         </div>
 
