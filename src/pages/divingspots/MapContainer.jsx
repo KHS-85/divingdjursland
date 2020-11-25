@@ -7,6 +7,22 @@ import '../../GlobalStyles/divingspots.scss'
 
 const MapContainer = () => {
 
+  var L = window.L;
+
+  var LeafIcon = L.Icon.extend({
+    options: {
+        shadowUrl: 'iconshadow.png',
+        iconSize:     [39, 51],
+        shadowSize:   [39, 51],
+        iconAnchor:   [14, 52],
+        shadowAnchor: [0, 52],
+        popupAnchor:  [7, -56]
+    }
+});
+
+var Vragicon = new LeafIcon({iconUrl: 'boaticon.png'}),
+    Strandicon = new LeafIcon({iconUrl: 'beachicon.png'})
+
   const { spots } = useContext(SpotContext)
 
   console.log(spots)
@@ -24,7 +40,7 @@ const MapContainer = () => {
     const position = [newLat, newLon]
 
     return (
-      <Marker position={position}>
+      <Marker position={position} icon={spot.type === "Vrag" ? Vragicon : Strandicon}>
         <Popup>
           <p className="popupTextHeadline"> {spot.Stednavn}  </p>
           <div className="row">

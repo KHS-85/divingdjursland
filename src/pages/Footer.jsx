@@ -10,8 +10,8 @@ const Footer = () => {
                    <div className="col-12 col-sm-4 pb-3">
                        <ul className="footer-list text-center text-sm-left footer-links">
                            <li><Link to="/"><span className="danish">Forside</span> <span className="english">Home</span> </Link></li>
-                           <li><Link to="/vilkaar"><span className="danish">Vilkår</span> <span className="english">Terms</span></Link></li>
-                           <li><Link to="/kontakt"><span className="danish">Kontakt</span> <span className="english">Contact</span></Link></li>
+                           <li><Link to="/dykkerspots"><span className="danish">Dykkerspots</span> <span className="english">Diving Spots</span></Link></li>
+                           <a href="https://fourth-groove-289807.ew.r.appspot.com/admin/" target="_blank" rel="noopener noreferrer"> <span className="danish">Admin</span> <span className="english">Admin</span> </a>
                        </ul>
                    </div>
 
